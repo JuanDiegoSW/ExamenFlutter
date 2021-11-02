@@ -69,7 +69,7 @@ class _ListaPageState extends State<ListaPage> {
           final imagen = _listaNumeros[index];
 
           return FadeInImage(
-            image: NetworkImage('https://picsum.photos/500/300/?image=0'),
+            image: NetworkImage('https://picsum.photos/500/300/?image=$imagen'),
             placeholder: AssetImage('assets/jar-loading.gif'),
           );
         },
@@ -93,11 +93,11 @@ class _ListaPageState extends State<ListaPage> {
 
 
   void _agregarimagenes() {
-
-    _ultimoItem++;
-    _listaNumeros.add( _ultimoItem );
-
+    
+    for (var i = 1; i <= 3; i++) {
+      _ultimoItem++;
+      _listaNumeros.add( _ultimoItem );
+    }
     setState(() {});
-  
   }
 }

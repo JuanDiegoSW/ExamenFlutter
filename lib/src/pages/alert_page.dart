@@ -18,13 +18,7 @@ class AlertPage extends StatelessWidget {
           shape: StadiumBorder(),
           onPressed: () => _mostrarAlert(context),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon( Icons.add_location ),
-        onPressed: () {
-          Navigator.pop(context);
-        },
-      ),
+      )
     );
     
   }
