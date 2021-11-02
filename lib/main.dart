@@ -15,7 +15,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Componentes APP',
       debugShowCheckedModeBanner: false,
-      home:HomePage()
+      initialRoute: '/',
+      routes: getApplicationRoutes(),
+      onGenerateRoute: ( RouteSettings settings ){
+
+        print( 'Ruta llamda: ${ settings.name }' );
+
+        return MaterialPageRoute(
+          builder: ( BuildContext context ) => AlertPage()
+        );
+      },
     );
+    
   }
 }
